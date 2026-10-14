@@ -1,0 +1,75 @@
+11
+1<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JellyMilk — Milk • Jelly • Happiness</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#beranda">
+      <span class="brand-icon">🥤</span>
+      <span><strong>JellyMilk</strong><small>Milk • Jelly • Happiness</small></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Buka menu">☰</button>
+    <nav id="navMenu">
+      <a class="active" href="#beranda">Beranda</a><a href="#produk">Produk</a>
+      <a href="#tentang">Tentang Kami</a><a href="#testimoni">Testimoni</a><a href="#kontak">Kontak</a>
+    </nav>
+    <label class="search"><input id="searchInput" type="search" placeholder="Cari rasa favoritmu..."><span>⌕</span></label>
+    <button class="icon-button" aria-label="Akun">♙</button>
+    <button class="icon-button cart-top" id="openCart" aria-label="Buka keranjang">🛒<b id="cartCount">0</b></button>
+  </header>
+
+  <main>
+    <section class="hero" id="beranda">
+      <div class="hero-copy">
+        <span class="pill">Segar • Creamy • Kenyal</span>
+        <h1>Susu Jelly</h1>
+        <p class="handwriting">Rasa Bahagia<br> dalam Setiap Tegukan</p>
+        <p class="intro">Nikmati kelezatan susu dengan jelly yang kenyal<br class="desktop"> dan menyegarkan. Cocok untuk segala suasana!</p>
+        <a class="primary-btn" href="#produk">Belanja Sekarang <span>→</span></a>
+        <div class="benefits"><span>◉ <small>Bahan<br>berkualitas</small></span><i></i><span>♧ <small>Tanpa<br>pengawet</small></span><i></i><span>♡ <small>Rasa lezat<br>& segar</small></span></div>
+      </div>
+      <div class="hero-art">
+        <div class="milk-splash"></div>
+        <div class="hero-cup"><div class="cup-lid"></div><div class="jelly-top">🟥 🟨 🟩</div><div class="cup-logo">🥤<strong>JellyMilk</strong><small>Milk • Jelly • Happiness</small></div><div class="jelly-bottom">🟥 🟨 🟩 🟧</div></div>
+        <div class="scribble">Jelly-nya,<br>Kenyal<br>Banget! ♥</div>
+        <span class="bubble b1"></span><span class="bubble b2"></span><span class="bubble b3"></span>
+      </div>
+    </section>
+
+    <section class="flavors" aria-label="Kategori rasa">
+      <a href="#produk" data-flavor="all"><span class="flavor-icon blue">🧋</span><span><b>Semua Produk</b><small>Lihat semua rasa</small></span></a>
+      <a href="#produk" data-flavor="original"><span class="flavor-icon yellow">🥤</span><span><b>Rasa Original</b><small>Favorit pelanggan</small></span></a>
+      <a href="#produk" data-flavor="cokelat"><span class="flavor-icon brown">🍫</span><span><b>Rasa Cokelat</b><small>Manis & creamy</small></span></a>
+      <a href="#produk" data-flavor="strawberry"><span class="flavor-icon pink">🍓</span><span><b>Rasa Strawberry</b><small>Segar & nikmat</small></span></a>
+      <a href="#produk" data-flavor="matcha"><span class="flavor-icon green">🍵</span><span><b>Rasa Matcha</b><small>Aroma khas Jepang</small></span></a>
+      <a href="#produk" data-flavor="taro"><span class="flavor-icon purple">🧋</span><span><b>Rasa Taro</b><small>Lembut & unik</small></span></a>
+    </section>
+
+    <section class="products section" id="produk">
+      <div class="section-heading"><div><h2>👑 Produk Terlaris</h2><p>Rasa favorit yang paling banyak dipesan!</p></div><a href="#produk" id="showAll">Lihat Semua →</a></div>
+      <div class="product-grid" id="productGrid"></div>
+    </section>
+
+    <section class="lower section" id="tentang">
+      <div class="about-card"><span class="eyebrow">KENALAN DENGAN KAMI</span><h2>Manisnya momen, segarnya JellyMilk.</h2><p>Kami memadukan susu lembut dengan potongan jelly kenyal untuk menemani harimu. Dibuat segar, penuh rasa, dan pas dinikmati kapan saja.</p><a href="#kontak" class="outline-btn">Hubungi Kami</a></div>
+      <div class="testimonial" id="testimoni"><span class="eyebrow">KATA MEREKA</span><h2>“Enak, creamy, jelly-nya banyak!”</h2><p>★★★★★</p><small>— Pelanggan JellyMilk</small></div>
+      <div class="contact-card" id="kontak"><span class="eyebrow">ADA PERTANYAAN?</span><h2>Chat kami di WhatsApp!</h2><p>Tim kami siap membantu kapan saja.</p><a class="wa-btn" id="waContact" href="#" target="_blank" rel="noopener">☏ &nbsp; Chat via WhatsApp</a><small>Fast respon • Tanya produk • Pesanan & pengiriman</small></div>
+    </section>
+  </main>
+
+  <footer><a class="brand footer-brand" href="#beranda"><span class="brand-icon">🥤</span><span><strong>JellyMilk</strong><small>Milk • Jelly • Happiness</small></span></a><div class="footer-links"><a href="#beranda">Beranda</a><a href="#produk">Produk</a><a href="#tentang">Tentang Kami</a><a href="#kontak">Kontak</a></div><span class="copyright">© 2026 JellyMilk. Semua hak dilindungi.</span></footer>
+
+  <div class="overlay" id="overlay"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Keranjang belanja">
+    <div class="drawer-head"><h2>Keranjang Belanja</h2><button id="closeCart" aria-label="Tutup keranjang">×</button></div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-summary"><div><span>Subtotal</span><b id="subtotal">Rp 0</b></div><div><span>Ongkos Kirim</span><b id="shipping">Rp 10.000</b></div><hr><div class="total"><span>Total</span><b id="total">Rp 10.000</b></div><button class="primary-btn checkout" id="checkoutBtn">Checkout via WhatsApp <span>→</span></button><button class="outline-btn continue" id="continueBtn">Lanjut Belanja</button><p class="note">Ongkir Rp10.000 untuk simulasi. Konfirmasi detail pesanan melalui WhatsApp.</p></div>
+  </aside>
+  <script src="script.js"></script>
+</body>
+</html>
